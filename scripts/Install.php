@@ -8,6 +8,7 @@ $db = new Config\Sqlite();
 dropaTabelaGaleria($db);
 criaTabelaGaleria($db);
 alteraPermissao();
+criaPastaUpload();
 
 echo "Tabela criada com sucesso!\n\n";
 
@@ -37,4 +38,9 @@ function alteraPermissao()
 {
     $database = WWW_ROOT.'/config/database.db';
     chmod($database, 0777);
+}
+
+function criaPastaUpload()
+{
+    mkdir(WWW_ROOT.'/web/upload', 0700);
 }
