@@ -1,7 +1,7 @@
 <?php
 define('WWW_PUBLIC', dirname(__FILE__));
 define('WWW_ROOT', dirname(__FILE__).'/..');
-$loader = require_once '../vendor/autoload.php';
+
 require_once '../config/Autoload.php';
 use Config\Autoload;
 use Config\Route;

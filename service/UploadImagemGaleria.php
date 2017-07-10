@@ -7,15 +7,19 @@ class UploadImagemGaleria extends UploadService
 {
     const PASTA_UPLOAD = 'upload';
 
-    public function uploadImagem($arquivo)
+    public function uploadImagem($arquivo, $pastaUpload = null)
     {
         if (!$this->validaExtensao($arquivo['imagem']['type'])) {
             throw new \Exception("Arquivo não é uma imagem válida.");
         }
 
+        if (is_null($pastaUpload)) {
+            $pastaUpload = self::PASTA_UPLOAD;
+        }
+
         return $this->upload(
             $arquivo['imagem']['tmp_name'],
-            self::PASTA_UPLOAD,
+            $pastaUpload,
             $this->formataNomeImagem($arquivo['imagem']['name'])
         );
     }

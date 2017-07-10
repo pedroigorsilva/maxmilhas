@@ -5,9 +5,19 @@ include_once('config/Sqlite.php');
 
 $db = new Config\Sqlite();
 
+dropaTabelaGaleria($db);
 criaTabelaGaleria($db);
 
 echo "Tabela criada com sucesso!\n\n";
+
+function dropaTabelaGaleria($db)
+{
+    echo "Dropando a tabela imagem\n\n";
+    $db->exec("
+        drop table if exists imagem;
+    ");
+    return true;
+}
 
 function criaTabelaGaleria($db)
 {
