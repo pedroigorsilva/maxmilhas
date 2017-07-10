@@ -7,6 +7,7 @@ $db = new Config\Sqlite();
 
 dropaTabelaGaleria($db);
 criaTabelaGaleria($db);
+alteraPermissao();
 
 echo "Tabela criada com sucesso!\n\n";
 
@@ -30,4 +31,10 @@ function criaTabelaGaleria($db)
         );
     ");
     return true;
+}
+
+function alteraPermissao()
+{
+    $database = WWW_ROOT.'/config/database.db';
+    chmod($database, 0777);
 }

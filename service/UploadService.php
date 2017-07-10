@@ -10,6 +10,7 @@ class UploadService
         if (!move_uploaded_file($tmpName, $arquivoDir)) {
             throw new \Exception("Ocorreu um erro ao fazer o upload do arquivo.");
         }
+        chmod($arquivoDir, 0777);
 
         return $arquivo;
     }
