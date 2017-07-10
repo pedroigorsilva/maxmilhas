@@ -1,4 +1,4 @@
-/web/upload/*
-/vendor/*
-/config/database.db
+web/upload/*
+vendor/*
+config/database.db
 composer.lock
