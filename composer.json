@@ -1,0 +1,17 @@
+{
+    "name": "pedro/maximilhas",
+    "description": "Maximilhas - Teste da galeria de fotos",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedro Igor",
+            "email": "pedrosilvaigor@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7"
+    },
+    "require-dev":{
+        "phpunit/phpunit": "^4.3"
+    }
+}

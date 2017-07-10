@@ -1,0 +1,25 @@
+[
+    {
+        "name": "pedro/sqlite",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pedroigorsilva/sqlite.git",
+            "reference": "07810df5ae6f7d6ba7c697aafebdc47d290bcd43"
+        },
+        "time": "2017-07-09 11:46:21",
+        "type": "library",
+        "installation-source": "source",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pedro Igor",
+                "email": "pedrosilvaigor@gmail.com"
+            }
+        ],
+        "description": "Cria a conexao com o banco de dados sqlite3"
+    }
+]
